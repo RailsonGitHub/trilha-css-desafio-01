@@ -7,10 +7,6 @@ body {
   width: 100%;
 }
 
-p {
-  color: white;
-}
-
 section {
   margin: 0 auto;
 }
@@ -64,6 +60,7 @@ h1 {
 }
 
 p {
+  color: white;
   font-weight: 510;
   font-size: 1.5vw;
   line-height: 1.5vw;
@@ -131,7 +128,7 @@ p {
 #course-content {
   max-width: 800px;
   width: 100%;
-  margin: 0 auto;
+  margin: 55px auto;
   text-align: center
 }
 
@@ -161,24 +158,49 @@ p {
 
 /* Estilos para a seção "Transformando o Mundo" */
 #transform-world {
-  height: 560px;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* Centraliza horizontalmente */
+  align-items: center;
+  /* Centraliza verticalmente */
+  height: 100vh;
+  /* Ajuste a altura do contêiner conforme necessário */
   background-position: center;
   background-size: cover;
   background-image: url(/DesafioCssCompletado/assets/images/woman-code.png);
   background-attachment: fixed;
-  border-top: 1px solid #33A8DB80;
-  border-bottom: 1px solid #33A8DB80;
+  border-top: 2px solid #47e50980;
+  border-bottom: 2px solid #d7cd0b80;
 
 }
 
 #transform-world p {
-  font-weight: 900;
-  font-size: 2.5rem;
-  text-transform: lowercase;
-  max-width: 250px;
-  text-shadow: 3px 2px #33A8DB;
-  margin-left: 50px;
+  background: linear-gradient(45deg, #270cc1, #FF4B2B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  max-width: 900px;
+  line-height: 4.5rem;
+  animation: transformAnimation 2s infinite;
+  text-align: center;
+}
+
+@keyframes transformAnimation {
+  0% {
+    transform: scale(1);
+    color: #270cc1;
+  }
+
+  50% {
+    transform: scale(1.1);
+    color: #FF4B2B;
+  }
+
+  100% {
+    transform: scale(1);
+    color: #270cc1;
+  }
 }
 
 /* Estilos para a seção "Desafios Profissionais" */

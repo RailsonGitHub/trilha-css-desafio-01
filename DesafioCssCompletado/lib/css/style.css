@@ -8,6 +8,12 @@ body {
 }
 
 section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
   margin: 0 auto;
 }
 
@@ -21,9 +27,10 @@ section {
   height: 600px;
   max-height: 605px;
   background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6)), url("/assets/images/banner.png");
-  border-bottom: 1px solid rgb(14, 14, 158);
+  border-bottom: 1px solid #47e50980;
   padding: 75px;
 }
+
 
 .banner-content {
 
@@ -115,15 +122,6 @@ p {
   }
 }
 
-.main-content {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
-  width: 100%;
-  /* Ocupar 100% da largura da tela */
-}
-
 /* Estilos para o conteúdo do curso */
 #course-content {
   max-width: 800px;
@@ -132,20 +130,31 @@ p {
   text-align: center
 }
 
+#course-content h2 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 3vw;
+  line-height: 4vw;
+  background-image: linear-gradient(180deg, #33A8DB 0%, #1472B7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
 
 #course-content .modules-list .module {
   color: white;
   width: 450px;
   margin: 0 auto 24px;
-  border: 1px solid #33A8DB;
-  background-color: #252525;
+  border: 1px solid #e34b0a;
+  background-color: #180d3d;
   padding: 16px;
   border-radius: 100px;
   box-shadow: inset -5px 6px 8px rgba(0, 0, 0, .7);
 }
 
 #course-content .modules-list .module span {
-  color: #33A8DB;
+  color: #18e109;
 }
 
 /* Estilos responsivos para a lista de módulos */
@@ -205,47 +214,71 @@ p {
 
 /* Estilos para a seção "Desafios Profissionais" */
 #professional-challenges {
-  text-align: center;
-  max-width: 800px;
-  margin-top: 15px;
-  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle farthest-corner at center, rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6), rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6), 
+  rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6), rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6), rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6), 
+  rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6), rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6), rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6),
+  rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6), rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6));
+  max-width: 100%;
 
 }
 
 #professional-challenges img {
-  width: 100%;
-  margin: 32px 0;
+  width: 50%;
 }
 
 #professional-challenges h2 {
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: 3rem;
+  line-height: 2rem;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 24px;
   color: #1572B7;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  -webkit-text-stroke: 1px #252525;
+  text-stroke: 1px #252525;
+  text-shadow: 0 0 1px #252525, 0 0 1px #252525, 0 0 1px #252525, 0 0 1px #252525;
+  text-align: center; /* Centralizar em telas maiores */
 }
 
+/* Media query para ajustes em telas menores */
+@media (max-width: 768px) {
+  #professional-challenges h2 {
+    text-align: center; /* Alinhar à esquerda em telas menores */
+  }
+}
 #professional-challenges p {
-  font-weight: 510;
+  width: 90%;
+  margin: 0 auto; /* Centralizar horizontalmente */
+  text-align: center;
+  font-weight: 600; 
   font-size: 1.2rem;
   line-height: 1.8rem;
 }
 
+/* Media query para ajustes em telas menores */
+@media (max-width: 768px) {
+  #professional-challenges p {
+    width: 100%; /* Largura total em telas menores */
+  }
+}
+
+
 /* Estilos para o rodapé */
 footer {
-  padding: 30px;
+  padding: 10px;
   text-align: center;
   background: linear-gradient(rgba(50, 168, 219, 0), rgba(50, 168, 219, 0.2));
-  border-top: 1px solid #33A8DB80;
+  border-top: 2px solid #33A8DB80;
 }
 
 footer .dio-logo {
   max-width: 300px;
   filter: drop-shadow(3px 3px 3px rgb(0, 150, 128));
-  margin-top: 5px;
-  margin-bottom: 1px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 footer a {
@@ -253,7 +286,6 @@ footer a {
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
-
 }
 
 footer a:hover {

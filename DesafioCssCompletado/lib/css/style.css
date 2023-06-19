@@ -176,7 +176,7 @@ p {
   /* Ajuste a altura do contêiner conforme necessário */
   background-position: center;
   background-size: cover;
-  background-image: url(/DesafioCssCompletado/assets/images/woman-code.png);
+  background-image: url(/assets/images/woman-code.png);
   background-attachment: fixed;
   border-top: 2px solid #47e50980;
   border-bottom: 2px solid #d7cd0b80;
